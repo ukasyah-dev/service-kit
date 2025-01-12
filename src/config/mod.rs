@@ -3,6 +3,9 @@ use envconfig::Envconfig;
 
 #[derive(Envconfig)]
 pub struct Config {
+    #[envconfig(from = "LOG_LEVEL", default = "info")]
+    pub log_level: String,
+
     #[envconfig(from = "HTTP_PORT", default = "3000")]
     pub http_port: u16,
 }
@@ -19,6 +22,7 @@ mod tests {
     #[test]
     fn it_works() {
         let config = load().unwrap();
+        assert_eq!(config.log_level, "info");
         assert_eq!(config.http_port, 3000);
     }
 }
