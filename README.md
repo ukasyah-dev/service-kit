@@ -10,4 +10,5 @@ cargo add tokio --features=macros,rt-multi-thread
 
 # Add http server dependencies
 cargo add axum
+cargo add serde --features=derive
 ```
