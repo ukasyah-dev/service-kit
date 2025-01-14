@@ -1,7 +1,7 @@
 use dotenvy::dotenv;
 use envconfig::Envconfig;
 
-#[derive(Envconfig)]
+#[derive(Envconfig, Clone)]
 pub struct Config {
     #[envconfig(from = "LOG_LEVEL", default = "info")]
     pub log_level: String,

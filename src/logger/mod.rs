@@ -5,7 +5,7 @@ use log::LevelFilter;
 
 use crate::config::Config;
 
-pub fn init(config: &Config) {
+pub fn init(config: Config) {
     let mut level_filter = LevelFilter::Info;
 
     match LevelFilter::from_str(&config.log_level) {

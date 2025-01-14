@@ -3,12 +3,12 @@ use tokio::net::TcpListener;
 
 use crate::{config::Config, shutdown};
 
-pub struct Server<'a> {
-    config: &'a Config,
+pub struct Server {
+    config: Config,
     pub router: Router,
 }
 
-impl<'a> Server<'a> {
+impl Server {
     pub async fn start(&self) {
         log::info!("Listening on port {}", self.config.http_port);
 
@@ -23,7 +23,7 @@ impl<'a> Server<'a> {
     }
 }
 
-pub fn new(config: &Config) -> Server {
+pub fn new(config: Config) -> Server {
     Server {
         config,
         router: Router::new(),
