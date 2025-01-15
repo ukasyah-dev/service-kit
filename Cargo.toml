@@ -10,6 +10,7 @@ repository = "https://github.com/ukasyah-dev/service-kit"
 
 [features]
 http = ["axum"]
+ssh = []
 
 [dependencies]
 axum = { version = "0.8.1", optional = true }

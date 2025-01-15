@@ -3,3 +3,5 @@ pub mod config;
 pub mod http;
 pub mod logger;
 pub mod shutdown;
+#[cfg(feature = "ssh")]
+pub mod ssh;
