@@ -8,6 +8,9 @@ pub struct Config {
 
     #[envconfig(from = "HTTP_PORT", default = "3000")]
     pub http_port: u16,
+
+    #[envconfig(from = "SSH_URL")]
+    pub ssh_url: String,
 }
 
 pub fn load() -> Result<Config, envconfig::Error> {

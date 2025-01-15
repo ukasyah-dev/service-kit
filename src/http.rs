@@ -23,7 +23,7 @@ impl Server {
     }
 }
 
-pub fn new(config: Config) -> Server {
+pub fn new_server(config: Config) -> Server {
     Server {
         config,
         router: Router::new(),
