@@ -1,6 +1,6 @@
 [package]
 name = "service-kit"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "Provides a set of tools and helpers for building backend services in Rust."
 keywords = ["backend", "service"]
