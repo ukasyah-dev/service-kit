@@ -5,7 +5,7 @@ pub struct Error {
     pub message: String,
 }
 
-pub enum ErrorCode {
+pub enum Code {
     AlreadyExists = 409,
     Internal = 500,
     InvalidArgument = 400,
@@ -14,7 +14,7 @@ pub enum ErrorCode {
     Unauthenticated = 401,
 }
 
-/// Returns an `Error` object with the `ErrorCode::AlreadyExists` code.
+/// Returns an `Error` object with the `Code::AlreadyExists` code.
 ///
 /// If `msg` is empty, "Already exists" is used.
 pub fn already_exists(msg: &str) -> Error {
@@ -25,12 +25,12 @@ pub fn already_exists(msg: &str) -> Error {
     }
 
     Error {
-        code: ErrorCode::AlreadyExists as u16,
+        code: Code::AlreadyExists as u16,
         message,
     }
 }
 
-/// Returns an `Error` object with the `ErrorCode::Internal` code.
+/// Returns an `Error` object with the `Code::Internal` code.
 ///
 /// If `msg` is empty, "Internal" is used.
 pub fn internal(msg: &str) -> Error {
@@ -41,12 +41,12 @@ pub fn internal(msg: &str) -> Error {
     }
 
     Error {
-        code: ErrorCode::Internal as u16,
+        code: Code::Internal as u16,
         message,
     }
 }
 
-/// Returns an `Error` object with the `ErrorCode::InvalidArgument` code.
+/// Returns an `Error` object with the `Code::InvalidArgument` code.
 ///
 /// If `msg` is empty, "Invalid argument" is used.
 pub fn invalid_argument(msg: &str) -> Error {
@@ -57,12 +57,12 @@ pub fn invalid_argument(msg: &str) -> Error {
     }
 
     Error {
-        code: ErrorCode::InvalidArgument as u16,
+        code: Code::InvalidArgument as u16,
         message,
     }
 }
 
-/// Returns an `Error` object with the `ErrorCode::NotFound` code.
+/// Returns an `Error` object with the `Code::NotFound` code.
 ///
 /// If `msg` is empty, "Not found" is used.
 pub fn not_found(msg: &str) -> Error {
@@ -73,12 +73,12 @@ pub fn not_found(msg: &str) -> Error {
     }
 
     Error {
-        code: ErrorCode::NotFound as u16,
+        code: Code::NotFound as u16,
         message,
     }
 }
 
-/// Returns an `Error` object with the `ErrorCode::PermissionDenied` code.
+/// Returns an `Error` object with the `Code::PermissionDenied` code.
 ///
 /// If `msg` is empty, "Permission denied" is used.
 pub fn permission_denied(msg: &str) -> Error {
@@ -89,12 +89,12 @@ pub fn permission_denied(msg: &str) -> Error {
     }
 
     Error {
-        code: ErrorCode::PermissionDenied as u16,
+        code: Code::PermissionDenied as u16,
         message,
     }
 }
 
-/// Returns an `Error` object with the `ErrorCode::Unauthenticated` code.
+/// Returns an `Error` object with the `Code::Unauthenticated` code.
 ///
 /// If `msg` is empty, "Unauthenticated" is used.
 pub fn unauthenticated(msg: &str) -> Error {
@@ -105,7 +105,7 @@ pub fn unauthenticated(msg: &str) -> Error {
     }
 
     Error {
-        code: ErrorCode::Unauthenticated as u16,
+        code: Code::Unauthenticated as u16,
         message,
     }
 }
