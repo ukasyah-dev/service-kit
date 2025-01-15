@@ -2,9 +2,17 @@
 name = "service-kit"
 version = "0.1.0"
 edition = "2021"
+description = "Provides a set of tools and helpers for building backend services in Rust."
+keywords = ["backend", "service"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/ukasyah-dev/service-kit"
+
+[features]
+http = ["axum"]
 
 [dependencies]
-axum = "0.8.1"
+axum = { version = "0.8.1", optional = true }
 dotenvy = "0.15.7"
 env_logger = "0.11.6"
 envconfig = "0.11.0"

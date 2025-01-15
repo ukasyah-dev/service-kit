@@ -6,7 +6,7 @@ Provides a set of tools and helpers for building backend services in Rust.
 
 ```bash
 # Add required dependencies
-cargo add tokio --features=macros,rt-multi-thread
+cargo add tokio --features=full
 
 # Add http server dependencies
 cargo add axum
