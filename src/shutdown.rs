@@ -4,10 +4,9 @@ use signal_hook::{
 };
 
 pub async fn wait_for_signal() {
-    let mut signals = Signals::new(&[SIGINT, SIGTERM]).unwrap();
+    let mut signals = Signals::new([SIGINT, SIGTERM]).unwrap();
 
-    for _ in signals.forever() {
+    if signals.forever().next().is_some() {
         log::info!("Received signal, shutting down");
-        break;
     }
 }
