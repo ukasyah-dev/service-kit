@@ -1,7 +1,10 @@
 pub mod config;
+pub mod error;
 #[cfg(feature = "http")]
 pub mod http;
 pub mod logger;
+#[cfg(feature = "http")]
+pub mod model;
 pub mod shutdown;
 #[cfg(feature = "ssh")]
 pub mod ssh;

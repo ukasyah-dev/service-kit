@@ -9,7 +9,7 @@ readme = "README.md"
 repository = "https://github.com/ukasyah-dev/service-kit"
 
 [features]
-http = ["axum"]
+http = ["axum", "serde"]
 ssh = ["async-trait", "russh"]
 
 [dependencies]
@@ -21,7 +21,9 @@ env_logger = "0.11.6"
 envconfig = "0.11.0"
 log = "0.4.22"
 russh = { version = "0.49.2", optional = true }
+serde = { version = "1.0.217", optional = true }
 signal-hook = "0.3.17"
+thiserror = "2.0.11"
 tokio = "1.43.0"
 tokio-util = "0.7.13"
 url = "2.5.4"
