@@ -10,14 +10,18 @@ repository = "https://github.com/ukasyah-dev/service-kit"
 
 [features]
 http = ["axum"]
-ssh = []
+ssh = ["russh"]
 
 [dependencies]
+anyhow = "1.0.95"
+async-trait = "0.1.85"
 axum = { version = "0.8.1", optional = true }
 dotenvy = "0.15.7"
 env_logger = "0.11.6"
 envconfig = "0.11.0"
 log = "0.4.22"
+russh = { version = "0.49.2", optional = true }
 signal-hook = "0.3.17"
 tokio = "1.43.0"
 tokio-util = "0.7.13"
+url = "2.5.4"
