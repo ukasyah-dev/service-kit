@@ -9,6 +9,9 @@ pub struct Config {
     #[envconfig(from = "HTTP_PORT", default = "3000")]
     pub http_port: u16,
 
+    #[envconfig(from = "NATS_URL")]
+    pub nats_url: String,
+
     #[envconfig(from = "SSH_URL")]
     pub ssh_url: String,
 }
