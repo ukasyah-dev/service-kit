@@ -2,6 +2,8 @@ pub mod config;
 pub mod error;
 #[cfg(feature = "http")]
 pub mod http;
+#[cfg(feature = "http")]
+pub mod http_middleware;
 pub mod logger;
 #[cfg(feature = "http")]
 pub mod model;
